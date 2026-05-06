@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import DialogueBox from "../components/ui/DialogueBox";
+import NavigationMenu from "../components/ui/NavigationMenu";
+import TabletOfDestiny from "../components/ui/TabletOfDestiny";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Portofolio Rel - Suikoden">
+  <div class="relative min-h-[80vh] pb-40">
+    <div class="grid gap-6 md:grid-cols-[220px_1fr]">
+      <aside class="space-y-4">
+        <NavigationMenu client:load />
+      </aside>
+      <section class="space-y-4">
+        <header class="rounded-xl border border-suikoden-border/70 bg-zinc-900/80 p-4 text-slate-200">
+          <h1 class="font-press-start text-base text-suikoden-border">
+            Headquarters
+          </h1>
+          <p class="mt-2 text-base">
+            Select a command to explore Rel's legend and active missions.
+          </p>
+        </header>
+        <TabletOfDestiny client:load />
+      </section>
+    </div>
+
+    <div class="pointer-events-none fixed inset-x-0 bottom-6 z-10 flex justify-center px-4">
+      <div class="pointer-events-auto w-full max-w-4xl">
+        <DialogueBox
+          client:load
+          speakerName="Tenkai Star"
+          text="Welcome to the Headquarters. The Tenkai Star has been waiting for you..."
+        />
+      </div>
+    </div>
+  </div>
 </Layout>
