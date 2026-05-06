@@ -28,9 +28,9 @@ const InnGuestbook = () => {
         <p className="mt-2 text-base text-slate-200">
           Leave a message for fellow travelers.
         </p>
-        <form className="mt-4 space-y-3">
+        <form className="mt-4 flex flex-col gap-3">
           <label className="block text-xs font-press-start uppercase text-slate-300">
-            Visitor Name
+            Traveler Name
             <input
               type="text"
               name="visitorName"
@@ -60,7 +60,7 @@ const InnGuestbook = () => {
         <h3 className="font-press-start text-xs text-suikoden-border">
           Recent Messages
         </h3>
-        <ScrollArea className="mt-3 h-64 pr-2">
+        <ScrollArea className="mt-3 h-48 md:h-64 rounded-md border border-suikoden-border/50 bg-zinc-950 p-4">
           <ul className="space-y-3">
             {mockMessages.map((entry) => (
               <li
@@ -73,7 +73,7 @@ const InnGuestbook = () => {
                   </span>
                   <span className="text-xs text-slate-400">{entry.time}</span>
                 </div>
-                <p className="mt-2 text-base text-slate-200">
+                <p className="mt-2 text-base font-vt323 text-slate-200">
                   {entry.message}
                 </p>
               </li>

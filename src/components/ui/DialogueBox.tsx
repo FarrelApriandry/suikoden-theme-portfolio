@@ -34,7 +34,10 @@ const DialogueBox = ({ text, speakerName }: DialogueBoxProps) => {
           {speakerName}
         </div>
       ) : null}
-      <motion.p aria-live="polite" className="text-xl leading-relaxed">
+      <motion.p
+        aria-live="polite"
+        className="text-base md:text-xl leading-relaxed"
+      >
         {displayText}
       </motion.p>
     </div>
