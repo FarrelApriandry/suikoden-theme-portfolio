@@ -8,6 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import InnGuestbook from "@/components/ui/InnGuestbook";
+import RunesForge from "@/components/ui/RunesForge";
 import TabletOfDestiny from "@/components/ui/TabletOfDestiny";
 
 const mapNodes = [
@@ -64,18 +65,14 @@ const HeadquartersMap = () => {
                 <Icon className="h-6 w-6" />
               </motion.button>
             </DialogTrigger>
-            <DialogContent className="w-[95vw] max-w-3xl max-h-[85vh] overflow-y-auto rounded-xl border-4 border-suikoden-border bg-zinc-950 p-4 md:p-6 text-slate-100">
+            <DialogContent className="w-[90vw] sm:max-w-3xl lg:max-w-5xl xl:max-w-6xl max-h-[85vh] overflow-y-auto rounded-xl border-4 border-suikoden-border bg-zinc-950 p-6 md:p-8 text-slate-100">
               <DialogTitle className="font-press-start text-sm text-suikoden-border">
                 {node.label}
               </DialogTitle>
               <div className="space-y-4">
                 {node.id === "tablet" ? <TabletOfDestiny /> : null}
                 {node.id === "inn" ? <InnGuestbook /> : null}
-                {node.id === "runes" ? (
-                  <div className="rounded-lg border border-suikoden-border/60 bg-zinc-900/80 p-4 text-base text-slate-200">
-                    Runes Forge Content
-                  </div>
-                ) : null}
+                {node.id === "runes" ? <RunesForge /> : null}
               </div>
             </DialogContent>
           </Dialog>
