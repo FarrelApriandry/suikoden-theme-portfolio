@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Castle, ScrollText, Tent } from "lucide-react";
-
+import { Castle, ScrollText, Tent, Crown, BookOpen, Compass } from "lucide-react"; // Tambah Crown, BookOpen, Compass
 import {
   Dialog,
   DialogContent,
@@ -13,11 +12,32 @@ import TabletOfDestiny from "@/components/ui/TabletOfDestiny";
 
 const mapNodes = [
   {
+    id: "commander",
+    label: "Commander's Room",
+    top: "15%",
+    left: "25%",
+    icon: Crown,
+  },
+  {
     id: "tablet",
     label: "Tablet of Destiny",
     top: "20%",
     left: "50%",
     icon: ScrollText,
+  },
+  {
+    id: "runes",
+    label: "Runes Forge",
+    top: "50%",
+    left: "70%",
+    icon: Castle,
+  },
+  {
+    id: "archives",
+    label: "The Archives",
+    top: "70%",
+    left: "65%",
+    icon: BookOpen,
   },
   {
     id: "inn",
@@ -27,11 +47,11 @@ const mapNodes = [
     icon: Tent,
   },
   {
-    id: "runes",
-    label: "Runes Forge",
-    top: "50%",
-    left: "70%",
-    icon: Castle,
+    id: "mirror",
+    label: "Blinking Mirror",
+    top: "80%",
+    left: "45%",
+    icon: Compass,
   },
 ];
 
