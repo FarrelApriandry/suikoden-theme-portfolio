@@ -10,6 +10,8 @@ import InnGuestbook from "@/components/ui/InnGuestbook";
 import RunesForge from "@/components/ui/RunesForge";
 import TabletOfDestiny from "@/components/ui/TabletOfDestiny";
 import CommandersRoom from "@/components/ui/CommandersRoom";
+import BlinkingMirror from "@/components/ui/BlinkingMirror";
+import TheArchives from "@/components/ui/TheArchives";
 
 const mapNodes = [
   {
@@ -95,6 +97,8 @@ const HeadquartersMap = () => {
                 {node.id === "tablet" ? <TabletOfDestiny /> : null}
                 {node.id === "inn" ? <InnGuestbook /> : null}
                 {node.id === "runes" ? <RunesForge /> : null}
+                {node.id === "archives" ? <TheArchives /> : null}
+                {node.id === "mirror" ? <BlinkingMirror /> : null}
               </div>
             </DialogContent>
           </Dialog>
