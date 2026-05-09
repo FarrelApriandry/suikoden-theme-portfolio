@@ -9,6 +9,7 @@ import {
 import InnGuestbook from "@/components/ui/InnGuestbook";
 import RunesForge from "@/components/ui/RunesForge";
 import TabletOfDestiny from "@/components/ui/TabletOfDestiny";
+import CommandersRoom from "@/components/ui/CommandersRoom";
 
 const mapNodes = [
   {
@@ -58,7 +59,7 @@ const mapNodes = [
 const HeadquartersMap = () => {
   return (
     <div
-      className="relative w-full aspect-[4/3] max-w-4xl mx-auto rounded-xl border-4 border-suikoden-border bg-zinc-800 overflow-hidden shadow-2xl"
+      className="relative w-full aspect-4/3 max-w-4xl mx-auto rounded-xl border-4 border-suikoden-border bg-zinc-800 overflow-hidden shadow-2xl"
       style={{
         backgroundImage: "url('/map-bg.jpg')",
         backgroundSize: "cover",
@@ -90,6 +91,7 @@ const HeadquartersMap = () => {
                 {node.label}
               </DialogTitle>
               <div className="space-y-4">
+                {node.id === "commander" ? <CommandersRoom /> : null}
                 {node.id === "tablet" ? <TabletOfDestiny /> : null}
                 {node.id === "inn" ? <InnGuestbook /> : null}
                 {node.id === "runes" ? <RunesForge /> : null}
